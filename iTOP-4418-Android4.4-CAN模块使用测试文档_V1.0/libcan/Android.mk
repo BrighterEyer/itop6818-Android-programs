@@ -1,0 +1,43 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_PRELINK_MODULE := false
+
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+
+LOCAL_LDLIBS += -llog
+
+LOCAL_SRC_FILES:= canHardware.c
+			
+LOCAL_C_INCLUDES +=$(JNI_H_INCLUDE)
+
+LOCAL_CFLAGS := -O0 -g
+#LOCAL_CFLAGS := -Wall -g
+
+#LOCAL_LDFLAGS:= -Wl
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE := libcanHardware
+
+#LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE_TAGS := debug
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+local_target_dir := $(TARGET_OUT)/bin
+LOCAL_MODULE := can.sh
+LOCAL_MODULE_TAGS := debug
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(local_target_dir)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+local_target_dir := $(TARGET_OUT)/bin
+LOCAL_MODULE := ip
+LOCAL_MODULE_TAGS := debug
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(local_target_dir)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget33"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<Button
+	android:id="@+id/can"
+	android:layout_width="146px"
+	android:layout_height="78px"
+	android:text="@string/canText"
+	android:layout_x="500dp"
+	android:layout_y="250dp" />
+<TextView
+	android:id="@+id/title"
+	android:layout_width="265px"
+	android:layout_height="38px"
+	android:text="@string/title"
+	android:gravity="center"
+	android:textSize="30sp"
+	android:layout_x="282dp"
+	android:layout_y="12dp" />
+</AbsoluteLayout>

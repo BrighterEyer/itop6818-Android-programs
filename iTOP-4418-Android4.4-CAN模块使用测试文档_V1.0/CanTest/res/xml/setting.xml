@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" android:title="Can setup">
+<ListPreference android:entries="@array/can_baudrate_name" android:entryValues="@array/can_baudrate_value" android:key="CANBAUDRATE" android:persistent="true" android:title="Baud rate"></ListPreference>
+<ListPreference android:key="AutoClear" android:title="Auto clear" android:entries="@array/clear_name" android:entryValues="@array/clear_value" android:persistent="true"></ListPreference>
+<ListPreference android:key="DisplayF" android:title="Display format" android:entries="@array/display_name" android:entryValues="@array/display_value" android:persistent="true"></ListPreference> 
+</PreferenceScreen>

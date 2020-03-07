@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string-array name="baudrates_name">
+<item>4800</item>
+<item>9600</item>
+<item>19200</item>
+<item>38400</item>
+<item>57600</item>
+<item>115200</item>
+</string-array>
+
+
+<string-array name="baudrates_value">
+<item>4800</item>
+<item>9600</item>
+<item>19200</item>
+<item>38400</item>
+<item>57600</item>
+<item>115200</item>
+</string-array>
+
+<string-array name="can_baudrate_name">
+    <item >5kbps</item>
+    <item >10kbps</item>
+    <item >20kbps</item>
+    <item >50kbps</item>
+    <item >100kbps</item>
+    <item >125kbps</item>
+    <item >250kbps</item>
+	<item >400kbps</item>
+    <item >500kbps</item>
+    <item >666kbps</item>
+    <item >800kbps</item>
+    <item >1000kbps</item>
+</string-array>
+
+<string-array name="can_baudrate_value">
+    <item >5000</item>
+    <item >10000</item>
+    <item >20000</item>
+    <item >50000</item>
+    <item >100000</item>
+    <item >125000</item>
+    <item >250000</item>
+	<item >400000</item>
+    <item >500000</item>
+    <item >666000</item>
+    <item >800000</item>
+    <item >1000000</item>
+</string-array>
+</resources>

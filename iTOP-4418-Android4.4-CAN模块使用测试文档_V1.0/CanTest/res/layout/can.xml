@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical" 
+   
+    >
+
+    <EditText
+        android:id="@+id/canReception"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:gravity="top"
+        android:hint="@string/rec"
+        android:scrollbarStyle="insideOverlay"
+        android:isScrollContainer="true"
+        android:layout_weight="1"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/canEmission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/send"
+        android:lines="1" 
+         
+        >
+    </EditText>
+    <LinearLayout
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+         
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button 
+            android:id="@+id/canSet"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+			android:text="@string/canset"
+			android:layout_weight="1"
+			android:layout_gravity="bottom"
+			
+            />
+        <Button 
+            android:id="@+id/quit"
+            
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+			android:text="@string/quit"
+			android:layout_weight="1"
+			android:layout_gravity="bottom"
+            />
+        </LinearLayout>
+
+</LinearLayout>
+
+
