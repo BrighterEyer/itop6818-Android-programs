@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_marginTop="1pt" android:layout_gravity="center_vertical">
+    <LinearLayout android:id="@+id/linearLayout12" android:layout_width="match_parent" android:orientation="vertical" android:layout_gravity="fill" android:background="@drawable/screen" android:layout_height="fill_parent" android:layout_weight="8" android:layout_marginBottom="5px" android:layout_marginTop="5px">
+        <TextView android:layout_marginLeft="5pt" android:layout_weight="1" android:scrollHorizontally="true" android:layout_width="fill_parent" android:text=" " android:textColor="#000000" android:layout_marginRight="4pt" android:gravity="top|left" android:minLines="1" android:layout_marginTop="5pt" android:lines="1" android:layout_gravity="left|center_vertical" android:id="@+id/textQuestion" android:layout_height="fill_parent" android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+        <TextView android:layout_marginLeft="5pt" android:scrollHorizontally="true" android:layout_width="fill_parent" android:text="0" android:textColor="#000000" android:layout_marginRight="4pt" android:gravity="right|center_vertical" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="right|center_vertical" android:id="@+id/textAnswer" android:layout_height="match_parent" android:layout_weight="1" android:lines="1" android:isScrollContainer="false"></TextView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout9" android:orientation="vertical" android:layout_gravity="bottom" android:layout_height="fill_parent" android:layout_weight="2">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_weight="1" android:gravity="center_vertical">
+            <CheckBox android:id="@+id/checkInv" android:text="Inv" android:layout_width="wrap_content" android:layout_height="fill_parent"></CheckBox>
+            <Button android:text="MS" android:onClick="onButtonClick" android:layout_weight="1" android:layout_width="fill_parent" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonMS" android:layout_height="fill_parent" android:layout_gravity="center_vertical"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:paddingRight="0px" android:layout_height="fill_parent" android:paddingLeft="0px" android:onClick="onButtonClick" android:id="@+id/Button04" android:text="MR"></Button>
+            <Button android:onClick="onButtonClick" android:layout_width="fill_parent" android:layout_weight="1" android:paddingRight="0px" android:paddingLeft="0px" android:layout_height="fill_parent" android:id="@+id/buttonMC" android:text="MC"></Button>
+            <Button android:layout_width="fill_parent" android:text="FS" android:paddingLeft="0px" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:id="@+id/buttonFS" android:layout_height="fill_parent"></Button>
+            <Button android:id="@+id/buttonConst" android:paddingLeft="0px" android:paddingRight="0px" android:onClick="onButtonClick" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="1" android:text="const"></Button>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout8" android:layout_height="fill_parent" android:layout_weight="1">
+            <Button android:layout_width="fill_parent" android:id="@+id/button00" android:onClick="onButtonClick" android:text="i" android:layout_weight="1"  android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:id="@+id/button03" android:onClick="onButtonClick" android:text="∠"  android:layout_weight="1"  android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:onClick="onButtonClick" android:id="@+id/button02" android:text="°"  android:layout_weight="1"  android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:id="@+id/button04" android:onClick="onButtonClick" android:text="("  android:layout_weight="1"  android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:onClick="onButtonClick" android:id="@+id/button05" android:text=","  android:layout_weight="1"  android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:id="@+id/Button02" android:onClick="onButtonClick" android:text=")"  android:layout_weight="1" android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:id="@+id/Button01" android:onClick="onButtonClick" android:text="#" android:layout_weight="1" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout7" android:layout_height="fill_parent" android:layout_weight="1">
+            <Button android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/button10" android:text="10" android:layout_width="fill_parent" android:layout_height="fill_parent"></Button>
+            <Button android:onClick="onButtonClick" android:layout_weight="1" android:layout_width="fill_parent" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/button11" android:text="11" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/button12" android:text="12" android:layout_height="fill_parent" android:layout_width="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:onClick="onButtonClick" android:layout_weight="1" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/button13" android:text="13" android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:onClick="onButtonClick" android:layout_weight="1" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/button14" android:text="14" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:paddingRight="0px" android:paddingLeft="0px" android:onClick="onButtonClick" android:id="@+id/button15" android:text="15" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout5" android:layout_height="fill_parent" android:layout_weight="1">
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button20" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="20" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button21" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="21" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button22" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="22" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button23" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="23" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button24" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="24" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button25" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:text="25" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">
+            <Button android:text="F1" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF1" android:layout_height="fill_parent"></Button>
+            <Button android:text="F2" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF2" android:layout_height="fill_parent"></Button>
+            <Button android:text="F3" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF3" android:layout_height="fill_parent"></Button>
+            <Button android:text="F4" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF4" android:layout_height="fill_parent"></Button>
+            <Button android:text="F5" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF5" android:layout_height="fill_parent"></Button>
+            <Button android:text="F6" android:layout_width="fill_parent" android:layout_weight="1" android:onClick="onButtonClick" android:paddingRight="0px" android:paddingLeft="0px" android:id="@+id/buttonF6" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_weight="1" android:layout_height="fill_parent">
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="7" android:id="@+id/button40" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="8" android:id="@+id/button41" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="9" android:id="@+id/button42" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="&lt;=" android:id="@+id/button43" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="AC" android:id="@+id/button44" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="4" android:id="@+id/button50" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="5" android:id="@+id/button51" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="6" android:id="@+id/button52" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button53" android:onClick="onButtonClick" android:text="×" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="/" android:id="@+id/button54" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout4" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="1" android:id="@+id/button60" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="2" android:id="@+id/button61" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="3" android:id="@+id/button62" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="+" android:id="@+id/button63" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="-" android:id="@+id/button64" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout6" android:layout_weight="1" android:layout_height="fill_parent">
+            <Button android:layout_width="fill_parent" android:text="0" android:layout_weight="1" android:id="@+id/button70" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:text="." android:id="@+id/button71" android:onClick="onButtonClick" android:layout_height="fill_parent"></Button>
+            <Button android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/button72" android:onClick="onButtonClick" android:text="exp" android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:text="%" android:layout_weight="1" android:onClick="onButtonClick" android:id="@+id/button02" android:layout_height="fill_parent"></Button>
+            <Button android:layout_width="fill_parent" android:text="=" android:id="@+id/button74" android:onClick="onButtonClick" android:layout_weight="1" android:layout_height="fill_parent"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

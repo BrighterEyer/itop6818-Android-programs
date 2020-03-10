@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/playLayout"
+    >
+<com.snake.view.GameView
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/gameview"
+/>
+<RelativeLayout
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10sp"
+>
+<TextView
+	android:id="@+id/timer"
+	android:text="@string/time"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="5sp"
+/>
+<TextView
+	android:id="@+id/foodnum"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10sp"
+    android:text="0"
+    android:layout_centerVertical="true"
+/>
+<ImageView
+	android:src="@drawable/shake_food"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@id/foodnum"
+    android:id="@+id/food"
+    android:layout_marginRight="10sp"
+    android:layout_centerVertical="true"
+/>
+</RelativeLayout>
+</RelativeLayout>

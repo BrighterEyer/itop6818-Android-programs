@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartCalculator</string>
+    <string name="memory_recall_dialog">Memory Recall</string>
+    <string name="memory_clear_dialog">Memory Clear</string>
+    <string name="function_set_dialog">Function Set</string>
+    <string name="error_invalid_parameter_count">Invalid parameter count.</string>
+    <string name="error_invalid_date_type">Invalid date type</string>
+    <string name="error_mathmatic_error">Mathmatic error</string>
+    <string name="error_invalid_input">Invalid input.</string>
+    <string name="error_undefined_custom_function">Undefined custom function</string>
+    <string name="error_self_call">Self call</string>
+    <string name="const_select_dialog">Select const</string>
+    <string name="error_unknown_keyword">Unknown keyword:</string>
+    <string name="error_unnecessary_keyword">Unnecessary keyword:</string>
+    <string name="character_angle">∠</string>
+    <string name="character_degree">°</string>
+    <string name="character_sqrt">√</string>
+    <string name="character_pi">π</string>
+    <string name="input_fun_name_dlg">Input function name</string>
+    <string name="error_invalid_fun_name">Invalid function name.</string>
+    <string name="error_program_error">Program Error.</string>
+    <string name="error_msg_dialog">Error</string>
+    <string name="error_used_fun_name">Used name.</string>
+    <string name="error_invalid_token">Invalid token</string>
+</resources>

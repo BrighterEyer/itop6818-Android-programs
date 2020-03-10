@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.43"
+            android:src="@drawable/ic_brightness" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto-brightness is enabled" />
+
+            <SeekBar
+                android:id="@+id/brightBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.43"
+            android:src="@drawable/ic_sound" />
+
+        <LinearLayout
+             android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音量" />
+
+            <SeekBar
+                android:id="@+id/soundBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/VoiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:text="开" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.43"
+            android:src="@drawable/ic_gps" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS接收器" />
+
+            <TextView
+                android:id="@+id/GpsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/GpsBtn"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:text="关" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.43"
+            android:src="@drawable/ic_3g" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络数据" />
+
+            <TextView
+                android:id="@+id/WebText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/WebBtn"
+          	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关" />
+
+    </LinearLayout>
+
+</LinearLayout>
