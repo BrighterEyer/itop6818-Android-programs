@@ -33,163 +33,159 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	 private boolean isRecording = false;
-	 private Object tmp = new Object();
-	
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		 Button start = (Button)findViewById(R.id.start_bt);
-	     start.setOnClickListener(new OnClickListener()
-	     { 	    @Override       
-	            public void onClick(View arg0) {
-	                // TODO Auto-generated method stub
-	                Thread thread = new Thread(new Runnable() {
-	                    public void run() {
-	                      record();
-	                    }
-	                  });
+    private boolean isRecording = false;
+    private Object tmp = new Object();
 
-	                  thread.start();
-	                  findViewById(R.id.start_bt).setEnabled(false);
-	                  findViewById(R.id.end_bt).setEnabled(true);
-	            }		 
 
-	      });	       
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-	      Button play = (Button)findViewById(R.id.play_bt);
-	      play.setOnClickListener(new OnClickListener(){
-	            @Override
-	            public void onClick(View v) {
-	                // TODO Auto-generated method stub
-	                play();
-	            }
-	        });	       
+        Button start = (Button) findViewById(R.id.start_bt);
+        start.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+                Thread thread = new Thread(new Runnable() {
+                    public void run() {
+                        record();
+                    }
+                });
 
-	        Button stop = (Button)findViewById(R.id.end_bt);
-	        stop.setEnabled(false);
-	        stop.setOnClickListener(new OnClickListener(){
-	            @Override
-	            public void onClick(View v) {
-	                // TODO Auto-generated method stub
-	                isRecording = false;
-	                findViewById(R.id.start_bt).setEnabled(true);
-	                findViewById(R.id.end_bt).setEnabled(false);
+                thread.start();
+                findViewById(R.id.start_bt).setEnabled(false);
+                findViewById(R.id.end_bt).setEnabled(true);
+            }
+        });
 
-	            }
-	        });	
-	}
+        Button play = (Button) findViewById(R.id.play_bt);
+        play.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                play();
+            }
+        });
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-	
-	
-	public void play() {
+        Button stop = (Button) findViewById(R.id.end_bt);
+        stop.setEnabled(false);
+        stop.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                isRecording = false;
+                findViewById(R.id.start_bt).setEnabled(true);
+                findViewById(R.id.end_bt).setEnabled(false);
 
-	      // Get the file we want to playback.
-	      File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/reverseme.pcm");
-	      // Get the length of the audio stored in the file (16 bit so 2 bytes per short)
-	      // and create a short array to store the recorded audio.
-	      int musicLength = (int)(file.length()/2);
-	      short[] music = new short[musicLength];	 
+            }
+        });
+    }
 
-	      try {
-	        // Create a DataInputStream to read the audio data back from the saved file.
-	        InputStream is = new FileInputStream(file);
-	        BufferedInputStream bis = new BufferedInputStream(is);
-	        DataInputStream dis = new DataInputStream(bis);         
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-	        // Read the file into the music array.
-	        int i = 0;
-	        while (dis.available() > 0) {
-	          music[i] = dis.readShort();
-	          i++;
-	        } 
-	        // Close the input streams.
-	        dis.close(); 
-	        //Create a new AudioTrack object using the same parameters as the AudioRecord
-	        // object used to create the file.
-	        AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,
-	                                               11025,
-	                                               AudioFormat.CHANNEL_CONFIGURATION_MONO,
-	                                               AudioFormat.ENCODING_PCM_16BIT,
-	                                               musicLength*2,
-	                                               AudioTrack.MODE_STREAM);
-	       // Start playback
-	        audioTrack.play();
-	       // Write the music buffer to the AudioTrack object
-	        audioTrack.write(music, 0, musicLength);
-	        audioTrack.stop();
 
-	      } catch (Throwable t) {
+    public void play() {
 
-	        Log.e("AudioTrack","Playback Failed");
+        // Get the file we want to playback.
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/reverseme.pcm");
+        // Get the length of the audio stored in the file (16 bit so 2 bytes per short)
+        // and create a short array to store the recorded audio.
+        int musicLength = (int) (file.length() / 2);
+        short[] music = new short[musicLength];
 
-	      }
+        try {
+            // Create a DataInputStream to read the audio data back from the saved file.
+            InputStream is = new FileInputStream(file);
+            BufferedInputStream bis = new BufferedInputStream(is);
+            DataInputStream dis = new DataInputStream(bis);
 
-	    }	
-	
-	public void record() {
+            // Read the file into the music array.
+            int i = 0;
+            while (dis.available() > 0) {
+                music[i] = dis.readShort();
+                i++;
+            }
+            // Close the input streams.
+            dis.close();
+            //Create a new AudioTrack object using the same parameters as the AudioRecord
+            // object used to create the file.
+            AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,
+                    11025,
+                    AudioFormat.CHANNEL_CONFIGURATION_MONO,
+                    AudioFormat.ENCODING_PCM_16BIT,
+                    musicLength * 2,
+                    AudioTrack.MODE_STREAM);
+            // Start playback
+            audioTrack.play();
+            // Write the music buffer to the AudioTrack object
+            audioTrack.write(music, 0, musicLength);
+            audioTrack.stop();
 
-	      int frequency = 11025;
-	      int channelConfiguration = AudioFormat.CHANNEL_CONFIGURATION_MONO;
-	      int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
-	      File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/reverseme.pcm");
-	      // Delete any previous recording.
-	      if (file.exists())file.delete();
+        } catch (Throwable t) {
 
-	      // Create the new file.
+            Log.e("AudioTrack", "Playback Failed");
 
-	      try 
-	      {
-	        file.createNewFile();
+        }
 
-	      } catch (IOException e) {
+    }
 
-	        throw new IllegalStateException("Failed to create " + file.toString());
-	      }	      
+    public void record() {
 
-	      try 
-	      {// Create a DataOuputStream to write the audio data into the saved file.
+        int frequency = 11025;
+        int channelConfiguration = AudioFormat.CHANNEL_CONFIGURATION_MONO;
+        int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/reverseme.pcm");
+        // Delete any previous recording.
+        if (file.exists()) file.delete();
 
-	        OutputStream os = new FileOutputStream(file);
-	        BufferedOutputStream bos = new BufferedOutputStream(os);
-	        DataOutputStream dos = new DataOutputStream(bos);        
+        // Create the new file.
 
-	        // Create a new AudioRecord object to record the audio.
+        try {
+            file.createNewFile();
 
-	        int bufferSize = AudioRecord.getMinBufferSize(frequency, channelConfiguration,  audioEncoding);
-	        AudioRecord audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
-	                                                  frequency, channelConfiguration,
-	                                                  audioEncoding, bufferSize);
+        } catch (IOException e) {
 
-	        short[] buffer = new short[bufferSize]; 
-	        audioRecord.startRecording();
+            throw new IllegalStateException("Failed to create " + file.toString());
+        }
 
-	        isRecording = true ;
-	        while (isRecording) 
-	        {
-	          int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
-	          for (int i = 0; i < bufferReadResult; i++)
-	            dos.writeShort(buffer[i]);
-	        } 
+        try {// Create a DataOuputStream to write the audio data into the saved file.
 
-	        audioRecord.stop();
-	        dos.close();     
+            OutputStream os = new FileOutputStream(file);
+            BufferedOutputStream bos = new BufferedOutputStream(os);
+            DataOutputStream dos = new DataOutputStream(bos);
 
-	      } catch (Throwable t) {
+            // Create a new AudioRecord object to record the audio.
 
-	        Log.e("AudioRecord","Recording Failed");
+            int bufferSize = AudioRecord.getMinBufferSize(frequency, channelConfiguration, audioEncoding);
+            AudioRecord audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC,
+                    frequency, channelConfiguration,
+                    audioEncoding, bufferSize);
 
-	      }
+            short[] buffer = new short[bufferSize];
+            audioRecord.startRecording();
 
-	    }
+            isRecording = true;
+            while (isRecording) {
+                int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
+                for (int i = 0; i < bufferReadResult; i++)
+                    dos.writeShort(buffer[i]);
+            }
+
+            audioRecord.stop();
+            dos.close();
+
+        } catch (Throwable t) {
+
+            Log.e("AudioRecord", "Recording Failed");
+
+        }
+
+    }
 
 }
